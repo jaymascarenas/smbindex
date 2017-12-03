@@ -1,0 +1,22 @@
+@media (max-width: 630px) {
+  html {
+    font-size: 62.5% * .8;
+  }
+
+  #indexSummary {
+    .gauge_wrapper {
+      .gauge_container {
+        canvas {
+          left: 4%;
+        }
+      }
+    }
+  }
+
+  .intro_copy {
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+    column-count: 1 !important;
+  }
+
+}

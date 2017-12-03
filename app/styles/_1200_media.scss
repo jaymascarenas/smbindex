@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+  html {
+    font-size: 62.5% * .9;
+  }
+  #indexSummary {
+    .msm_categories {
+      @include font-size(2.0);
+    }
+  }
+  .chart_sections {
+    .chart_legend {
+      ul.choropleth {
+        li {
+          i {
+            @include font-size(3.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+

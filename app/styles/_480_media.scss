@@ -1,0 +1,58 @@
+@media (max-width: 480px) {
+  html {
+    font-size: 62.5% * .75;
+  }
+  .container, .container-fluid {
+    padding: 0 20px;
+  }
+  #datePicker {
+    height: 175px;
+    .calendar_button {
+      @include font-size(3.8);
+    }
+    .pick_wrapper {
+      .monthPicker {
+        left: 48%;
+      }
+    }
+  }
+  #indexSummary {
+    [class*='span'], .uneditable-input[class*='span'], .row-fluid [class*='span'] {
+      width: 100%;
+    }
+    .first_border {
+      margin-left: 25px;
+    }
+    .left_border {
+      width: 30%;
+      height: 200px;
+    }
+  }
+  .chart_sections {
+    padding-bottom: 50px;
+    .headings {
+      margin: 14px 0 0;
+    }
+    #clipboardSalesGrowth, #clipboardTransGrowth, #clipboardAvgTicketGrowth, #clipboardCustomerAcq, #clipboardSpendPerCard {
+      margin-top: -50px;
+    }
+  }
+  .back_to_top {
+    width: 32px;
+    height: 32px;
+  }
+  #errorModal {
+    top: 3%;
+    height: 50%;
+    .json_error h1 {
+      line-height: 30px;
+    }
+  }
+  #indexSummaryChart {
+    width: 280px;
+  }
+  #noDataModal {
+    top: 3%;
+    left: 55%;
+  }
+}

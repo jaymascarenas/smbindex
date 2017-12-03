@@ -1,0 +1,29 @@
+@media (max-width: 980px) {
+  #indexSummary {
+    .gauge_wrapper {
+      .gauge_container {
+        canvas {
+          left: 4%;
+        }
+      }
+    }
+    .index_summary {
+      padding-top: 22%;
+    }
+  }
+  .chart_sections {
+    .chart_legend {
+      ul.choropleth {
+        padding-top: 18px;
+        li {
+          i {
+            @include font-size(2.4);
+          }
+        }
+      }
+    }
+    #salesMap, #transactionMap, #avgTicketMap {
+      min-height: 120px;
+    }
+  }
+}

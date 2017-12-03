@@ -1,0 +1,19 @@
+@media (max-width: 570px) {
+
+  #indexSummary {
+    .gauge_wrapper {
+      .gauge_container {
+        background: inherit;
+        min-height: 120px;
+      }
+    }
+    .index_summary {
+      padding-top: 8%;
+    }
+    .left_border {
+      .left_border_inner {
+        padding-left: 0;
+      }
+    }
+  }
+}

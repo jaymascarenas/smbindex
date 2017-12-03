@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mainstreet Monitor</title>
+  <link rel="stylesheet"
+        href="https://www.firstdata.com/etc/designs/cs/cs_commons/vendor/fancybox.2d7fd4da465625a5ac30221ce992cbd1.css"
+        type="text/css"/>
+  <link rel="stylesheet"
+        href="https://www.firstdata.com/etc/designs/cs/firstdatacom-responsive/clientlib-all.289ce46e85bdf93085c10a426903192f.css"
+        type="text/css"/>
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="styles/jquery-ui.min.css">
+  <link rel="stylesheet" href="/bower_components/c3/c3.css"/>
+  <link rel="stylesheet" href="/bower_components/jquery-ui-month-picker/demo/MonthPicker.min.css">
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/initial.js -->
+  <script src="/bower_components/jquery-legacy/dist/jquery.js"></script>
+  <!-- endbuild -->
+
+  <!--[if IE]>
+  <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!--<link rel="stylesheet" href="https://grids.graaf.space/1170/12/16.css">-->
+</head>
+
+<body>
+<header>
+  <!-- handles ajax loading overlay -->
+</header>
+<script type="text/javascript">
+  $('header').addClass('loading');
+
+</script>
+<section id="datePicker">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span4">
+        <!--<img src="images/mmlogo.png" alt="Mainstreet Monitor"/>-->
+      </div>
+      <div class="span6">
+        <div class="pick_wrapper">
+          <h2 class="calendar_button"></h2>
+          <i id="pickShow" class="fa fa-caret-down cal_button_arrow" aria-hidden="true"></i>
+          <input id="monthPicker" type="text" style="display: none;"/>
+          <p class="select_yoy">Select month and year</p>
+          <div class="monthPicker"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="indexSummary">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="gauge_wrapper">
+          <div class="gauge_container">
+            <div class="indexValueWrap">
+              <h1 class="index_summary" id="gaugeValue"></h1>
+              <h3 class="month_year_heading"><span class="my1">April</span> <span class="my2">2017</span>&nbsp;Index
+              </h3>
+              <h3 class="yoy_value"></h3>&nbsp;<span class="yoy">year over year</span>
+            </div>
+            <canvas id="gauge"></canvas>
+          </div>
+          <div class="summaryHr"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="msm_summary">
+          <h4>The --company name-- is a small business index that reflects the health of the US small
+            business economy.</h4>
+        </div>
+      </div>
+    </div>
+    <div class="summary_desktop">
+      <div class="row-fluid">
+        <div class="span2 left_border first_border">
+
+          <div class="left_border_inner">
+            <a href="#salesGrowth">
+              <h4 class="msm_categories">Sales</h4>
+              <h3 class="msm_categories_value perf_sales"></h3>
+            </a>
+            <div id="salesOverall" class="sparkLines"></div>
+          </div>
+        </div>
+        <div class="span2 left_border">
+          <div class="left_border_inner">
+            <a href="#transactionGrowth">
+              <h4 class="msm_categories">Transactions</h4>
+              <h3 class="msm_categories_value perf_transactions"></h3>
+            </a>
+            <div id="transactionsOverall" class="sparkLines"></div>
+          </div>
+        </div>
+        <div class="span2 left_border">
+          <div class="left_border_inner">
+            <a href="#averageTicketGrowth">
+              <h4 class="msm_categories">Average Ticket</h4>
+              <h3 class="msm_categories_value perf_ticket"></h3>
+            </a>
+            <div id="avgTicketOverall" class="sparkLines"></div>
+          </div>
+        </div>
+        <div class="span2 left_border">
+          <div class="left_border_inner">
+            <a href="#spendPerCard">
+              <h4 class="msm_categories">Spend per Card</h4>
+              <h3 class="msm_categories_value perf_spend"></h3>
+            </a>
+            <div id="spendPerCardOverall" class="sparkLines"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="summary_mobile">
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="cat_sum sum_sales_volume">
+            <h4 class="cat_title">Sales <a href="#salesGrowth" class="view_chart_link">view chart</a></h4>
+            <h3 class="msm_categories_value perf_sales" style="clear:both;"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="cat_sum sum_transactions">
+            <h4 class="cat_title">Transactions <a href="#transactionGrowth" class="view_chart_link">view chart</a></h4>
+            <h3 class="msm_categories_value perf_transactions"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="cat_sum sum_average_ticket">
+            <h4 class="cat_title">Average Ticket <a href="#averageTicketGrowth" class="view_chart_link">view chart</a>
+            </h4>
+            <h3 class="msm_categories_value perf_ticket"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="cat_sum sum_spend_per_card">
+            <h4 class="cat_title">Spend per Card <a href="#spendPerCard" class="view_chart_link">view chart</a></h4>
+            <h3 class="msm_categories_value perf_spend"></h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span10">
+        <div class="add_this">
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5491d8ef1d5b21e5"
+                  async="async"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="introduction">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <h3 class="intro_heading">Ornare parturient a parturient euismod fermentum at ad integer ultrices curae dolor
+          tellus risus aliquet orci lacinia sem amet ullamcorper arcu. Litora vestibulum posuere malesuada luctus et
+          pharetra semper a porttitor dui vestibulum adipiscing integer odio a a nec nec a quis nec vel suspendisse
+          dapibus...</h3>
+        <span class="intro_rule"></span>
+        <div class="intro_copy_wrap">
+          <div class="intro_copy">
+            <p>Condimentum facilisis vestibulum parturient habitant fringilla vestibulum gravida litora taciti
+              malesuada.
+              Risus condimentum pharetra cubilia a quisque in lacus dui mollis tortor tortor odio dolor curae. Justo
+              dolor
+              vestibulum venenatis ut eu per quisque parturient arcu ullamcorper consectetur interdum potenti fermentum
+              suspendisse gravida mi euismod ipsum vestibulum ligula justo potenti donec aliquam magnis mattis.</p>
+            <p> Lobortis vulputate nunc viverra curabitur at condimentum mi convallis vivamus parturient laoreet ante
+              vestibulum sed etiam ornare porttitor parturient leo a sodales adipiscing vestibulum elementum suspendisse
+              curabitur. Ac taciti porta lobortis duis mollis vestibulum mi donec consequat lorem non curae dui faucibus
+              tortor nascetur egestas a elementum ultricies condimentum id mus rutrum donec sit hac. Litora laoreet
+              mollis
+              torquent ut porttitor aliquam curae posuere hac tempor vestibulum a cras a hac dictum adipiscing a
+              condimentum viverra sed et ullamcorper parturient.
+            </p>
+            <p>Varius sodales felis egestas mus ad adipiscing condimentum aliquet a a donec a mi mollis a consectetur a
+              curae. Turpis urna commodo vulputate class consectetur natoque ad eros luctus suspendisse enim mauris a
+              ligula in est porta nam. Fringilla sodales et vulputate consectetur adipiscing ipsum vel odio pretium
+              ullamcorper dis vestibulum dui tincidunt ullamcorper felis a tincidunt malesuada sem vestibulum nascetur
+              at
+              odio est adipiscing tempus adipiscing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="read_more">
+  <div class="read_more_icon"></div>
+</section>
+<section id="salesGrowth" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="headings">
+          <h3 class="month_year_heading"><span class="my1"></span> <span class="my2"></span></h3>
+          <h3 class="headings_category">Sales Growth <span data-clipboard-target="#clipboardSalesGrowth"
+                                                           class="share_link"></span></h3>
+          <p id="clipboardSalesGrowth">#salesGrowth</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Sales Growth by Sector<span class="comma">,</span> <span class="my1"></span> <span class="my2"></span>
+          </h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul>
+            <li class="leg_color1"><i class="fa fa-circle" aria-hidden="true"></i>Food/Drink</li>
+            <li class="leg_color2"><i class="fa fa-circle" aria-hidden="true"></i>General Merchandise</li>
+            <li class="leg_color3"><i class="fa fa-circle" aria-hidden="true"></i>Personal Care</li>
+            <li class="leg_color4"><i class="fa fa-circle" aria-hidden="true"></i>Leisure</li>
+            <li class="leg_color5"><i class="fa fa-circle" aria-hidden="true"></i>Clothing/Accesory</li>
+          </ul>
+        </div>
+        <div id="salesChart" class="charts"></div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="salesChartYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Sales Growth by Region<span class="comma">,</span> <span class="my1"></span> <span class="my2"></span>
+          </h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul class="choropleth">
+            <li class="choro_color1"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&gt;10%
+            </li>
+            <li class="choro_color2"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>10%
+            </li>
+            <li class="choro_color3"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>8%
+            </li>
+            <li class="choro_color4"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>6%
+            </li>
+            <li class="choro_color5"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>4%
+            </li>
+            <li class="choro_color6"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>2%
+            </li>
+            <li class="choro_color7"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-2%
+            </li>
+            <li class="choro_color8"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-4%
+            </li>
+            <li class="choro_color9"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-6%
+            </li>
+            <li class="choro_color10"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-8%
+            </li>
+            <li class="choro_color11"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-10%
+            </li>
+            <li class="choro_color12"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&lt;-10%
+            </li>
+          </ul>
+        </div>
+        <div id="salesMap" class="charts"></div>
+        <div class="chart_info">
+          <p class="hidden-desktop">Tap for more info</p>
+          <p class="visible-desktop">Hover for more info</p>
+        </div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="salesMapYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+<section id="transactionGrowth" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="headings">
+          <h3 class="month_year_heading"><span class="my1"></span> <span class="my2"></span></h3>
+          <h3 class="headings_category">Transaction Growth <span data-clipboard-target="#clipboardTransGrowth"
+                                                                 class="share_link"></span></h3>
+          <p id="clipboardTransGrowth">#transactionGrowth</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Transaction Growth by Sector<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul>
+            <li class="leg_color1"><i class="fa fa-circle" aria-hidden="true"></i>Food/Drink</li>
+            <li class="leg_color2"><i class="fa fa-circle" aria-hidden="true"></i>General Merchandise</li>
+            <li class="leg_color3"><i class="fa fa-circle" aria-hidden="true"></i>Personal Care</li>
+            <li class="leg_color4"><i class="fa fa-circle" aria-hidden="true"></i>Leisure</li>
+            <li class="leg_color5"><i class="fa fa-circle" aria-hidden="true"></i>Clothing/Accesory</li>
+          </ul>
+        </div>
+        <div id="transactionChart" class="charts"></div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="transactionChartYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Transaction Growth by Region<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul class="choropleth">
+            <li class="choro_color1"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&gt;10%
+            </li>
+            <li class="choro_color2"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>10%
+            </li>
+            <li class="choro_color3"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>8%
+            </li>
+            <li class="choro_color4"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>6%
+            </li>
+            <li class="choro_color5"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>4%
+            </li>
+            <li class="choro_color6"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>2%
+            </li>
+            <li class="choro_color7"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-2%
+            </li>
+            <li class="choro_color8"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-4%
+            </li>
+            <li class="choro_color9"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-6%
+            </li>
+            <li class="choro_color10"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-8%
+            </li>
+            <li class="choro_color11"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-10%
+            </li>
+            <li class="choro_color12"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&lt;-10%
+            </li>
+          </ul>
+        </div>
+        <div id="transactionMap" class="charts"></div>
+        <div class="chart_info">
+          <p class="hidden-desktop">Tap for more info</p>
+          <p class="visible-desktop">Hover for more info</p>
+        </div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="transactionMapYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+<section id="averageTicketGrowth" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="headings">
+          <h3 class="month_year_heading"><span class="my1"></span> <span class="my2"></span></h3>
+          <h3 class="headings_category">Average Ticket Growth <span data-clipboard-target="#clipboardAvgTicketGrowth"
+                                                                    class="share_link"></span></h3>
+          <p id="clipboardAvgTicketGrowth">#averageTicketGrowth</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Average Ticket Growth by Sector<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul>
+            <li class="leg_color1"><i class="fa fa-circle" aria-hidden="true"></i>Food/Drink</li>
+            <li class="leg_color2"><i class="fa fa-circle" aria-hidden="true"></i>General Merchandise</li>
+            <li class="leg_color3"><i class="fa fa-circle" aria-hidden="true"></i>Personal Care</li>
+            <li class="leg_color4"><i class="fa fa-circle" aria-hidden="true"></i>Leisure</li>
+            <li class="leg_color5"><i class="fa fa-circle" aria-hidden="true"></i>Clothing/Accesory</li>
+          </ul>
+        </div>
+        <div id="avgTicketChart" class="charts"></div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="avgTicketChartYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+      <div class="span6">
+        <div class="chart_heading">
+          <h4>Average Ticket Growth by Region<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul class="choropleth">
+            <li class="choro_color1"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&gt;10%
+            </li>
+            <li class="choro_color2"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>10%
+            </li>
+            <li class="choro_color3"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>8%
+            </li>
+            <li class="choro_color4"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>6%
+            </li>
+            <li class="choro_color5"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>4%
+            </li>
+            <li class="choro_color6"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>2%
+            </li>
+            <li class="choro_color7"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-2%
+            </li>
+            <li class="choro_color8"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-4%
+            </li>
+            <li class="choro_color9"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-6%
+            </li>
+            <li class="choro_color10"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-8%
+            </li>
+            <li class="choro_color11"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>-10%
+            </li>
+            <li class="choro_color12"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+              <br>&lt;-10%
+            </li>
+          </ul>
+        </div>
+        <div id="avgTicketMap" class="charts"></div>
+        <div class="chart_info">
+          <p class="hidden-desktop">Tap for more info</p>
+          <p class="visible-desktop">Hover for more info</p>
+        </div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="avgTicketMapYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span8 offset2 amount_chart_wrapper">
+        <div class="chart_heading">
+          <h4>Average Ticket Amount by Sector<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="chart_legend"></div>
+        <div class="amounts">
+          <p class="amount_clothing"></p>
+          <div id="avgTicketAmountClothing"></div>
+
+          <p class="amount_food">
+          <div id="avgTicketAmountFood"></div>
+
+          <p class="amount_general">
+          <div id="avgTicketAmountGeneral"></div>
+
+          <p class="amount_health">
+          <div id="avgTicketAmountHealth"></div>
+
+          <p class="amount_leisure">
+          <div id="avgTicketAmountLeisure"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="spendPerCard" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <div class="headings">
+          <h3 class="month_year_heading"><span class="my1"></span> <span class="my2"></span></h3>
+          <h3 class="headings_category">Spend per Card <span data-clipboard-target="#clipboardSpendPerCard"
+                                                             class="share_link">Share link</span></h3>
+          <p id="clipboardSpendPerCard">#spendPerCard</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <div class="chart_heading">
+          <h4>Spend per Card by Sector<span class="comma">,</span> <span class="my1"></span> <span class="my2"></span>
+          </h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul>
+            <li class="leg_color1"><i class="fa fa-circle" aria-hidden="true"></i>Food/Drink</li>
+            <li class="leg_color2"><i class="fa fa-circle" aria-hidden="true"></i>General Merchandise</li>
+            <li class="leg_color3"><i class="fa fa-circle" aria-hidden="true"></i>Personal Care</li>
+            <li class="leg_color4"><i class="fa fa-circle" aria-hidden="true"></i>Leisure</li>
+            <li class="leg_color5"><i class="fa fa-circle" aria-hidden="true"></i>Clothing/Accesory</li>
+          </ul>
+        </div>
+        <div id="spendPerCardChart" class="charts"></div>
+        <div class="chart_info">
+          <p class="hidden-desktop">Tap for more info</p>
+          <p class="visible-desktop">Hover for more info</p>
+        </div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        <!--        <div class="chart_summary">
+                  <p class="spendPerChartYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>-->
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section id="customerAcquisition" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <div class="headings">
+          <h3 class="month_year_heading"><span class="my1"></span> <span class="my2"></span></h3>
+          <h3 class="headings_category">Customer Acquisition Growth <span data-clipboard-target="#clipboardCustomerAcq"
+                                                                          class="share_link"></span></h3>
+          <p id="clipboardCustomerAcq">#customerAcquisition</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <div class="chart_heading">
+          <h4>Customer Acquisition Growth by Sector<span class="comma">,</span> <span class="my1"></span> <span
+            class="my2"></span></h4>
+          <p>Year over Year</p>
+        </div>
+        <div class="share_export">
+          <p>Share</p>
+        </div>
+        <div class="chart_legend">
+          <ul>
+            <li class="leg_color1"><i class="fa fa-circle" aria-hidden="true"></i>Food/Drink</li>
+            <li class="leg_color2"><i class="fa fa-circle" aria-hidden="true"></i>General Merchandise</li>
+            <li class="leg_color3"><i class="fa fa-circle" aria-hidden="true"></i>Personal Care</li>
+            <li class="leg_color4"><i class="fa fa-circle" aria-hidden="true"></i>Leisure</li>
+            <li class="leg_color5"><i class="fa fa-circle" aria-hidden="true"></i>Clothing/Accesory</li>
+          </ul>
+        </div>
+        <div id="customerAcqChart" class="charts"></div>
+        <div class="chart_copyright">
+          <p>&copy; --company name--</p>
+        </div>
+        &lt;!&ndash;        <div class="chart_summary">
+                  <p class="custAcqChartYoyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati
+                    recusandae reiciendis
+                    repudiandae! Accusamus amet, cupiditate delectus distinctio eos explicabo in itaque labore perferendis,
+                    quibusdam quo reprehenderit rerum tempora vel.</p>
+                </div>&ndash;&gt;
+      </div>
+    </div>
+  </div>
+</section>-->
+<section id="aboutMainstreetMonitor" class="chart_sections">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span10 offset1">
+        <p><strong>About --company name--</strong>
+          <br> The --company name-- is a small business index that reflects the health of the US small
+          business economy. Leveraging billions of credit and debit card transactions from small
+          businesses that process with --company name--, the --company name-- provides the definitive analysis
+          of consumer spending at small businesses across the United States. --company name-- defines a small business as: (1)
+          a business that had total payment card sales volume across all stores of no more than $10 million in the
+          previous 12 months and (2) a business that operated less than 10 locations during that period. National
+          brands, merchants with little or no activity in the previous year, and merchants with outlying year-over-year
+          sales growth or declines are excluded from the data.
+        </p>
+        <p><strong>Performance</strong>
+          <br> The Performance Index reflects U.S. small business growth trends based on actual consumer spending. The
+          index is a weighted measure of the difference between positive and negative sales growth, factored by the
+          number of merchants with same-store year-over-year sales included in the data set.</p>
+        <p><strong>Industry Growth</strong>
+          <br> Growth by Sector showcases several industries based on same-store year-over-year analysis of key
+          performance metrics including sales, transaction volume and average ticket size.</p>
+        <p><strong>Regional Analysis</strong>
+          <br> Growth by Region is a color-coded geospatial view of key performance metrics including same-store
+          year-over-year sales growth, transaction volume and average ticket size.</p>
+        <p><strong>Customer Spend</strong>
+          <br> Spend per Card displays the same-store year-over-year sales growth trends in average spend per payment
+          card for several industries.</p>
+        <p><strong>Customer Acquisition</strong>
+          <br> Customer Acquisition highlights the growth of new customers acquired on a same-store year-over-year sales
+          analysis for several industries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="errorModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Error!</h3>
+  </div>
+  <div class="modal-body">
+    <div class="json_error">
+      <h1>There was an error retreiving your data. <br> Please refresh your browser or select a new date.</h1>
+    </div>
+  </div>
+</div>
+
+<div id="noDataModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
+     aria-hidden="true">
+  <div class="modal-body">
+    <div class="json_error ">
+      <h1>There is no data for the month you selected. Defaulting to the latest month with data.</h1>
+      <div class="loadingModal"></div>
+    </div>
+  </div>
+</div>
+
+<!-- back to top icon -->
+<a href="#" class="back_to_top" style="display: inline;">
+  <i class="fa fa-arrow-circle-up"></i>
+</a>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function (b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function () {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = '//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="/bower_components/jquery-ui-month-picker/src/MonthPicker.js"></script>
+<script src="/bower_components/d3/d3.js"></script>
+<!--<script src="/bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+<script src="/bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>-->
+<script src="/bower_components/c3/c3.js"></script>
+<script src="/bower_components/topojson/topojson.js"></script>
+<script src="/bower_components/datamaps/dist/datamaps.usa.js"></script>
+<script src="/bower_components/clipboard/dist/clipboard.min.js"></script>
+
+<!-- TODO: W T F -->
+<script src="/bower_components/countUp.js/dist/countUp.min.js"></script>
+
+<script src="scripts/gauge.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!--<script src="//cdn.jsdelivr.net/countupjs/1.1.0/countUp.min.js"></script>-->
+
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/sass-bootstrap/js/bootstrap-modal.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+<!--<script src="/bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-transition.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-popover.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+<script src="/bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>-->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+
+</html>

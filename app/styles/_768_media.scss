@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5% * .85;
+  }
+  .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #datePicker {
+    height: 175px;
+    background-size: cover;
+    .pick_wrapper {
+      .monthPicker {
+        left: 32%;
+      }
+    }
+  }
+  #indexSummary {
+    [class*='span'], .uneditable-input[class*='span'], .row-fluid [class*='span'] {
+      width: 100%;
+      margin: 0;
+    }
+    .summary_desktop {
+      text-align: center;
+      .span2 {
+        width: 50%;
+      }
+    }
+    .first_border {
+      margin-left: 25px;
+    }
+    .left_border {
+      float: left;
+      width: 40%;
+      border-left: none;
+      margin: 0 25px;
+      .left_border_inner {
+        border-left: none;
+      }
+    }
+    .cat_sum {
+      background-position: 1% 9%;
+    }
+    .msm_summary {
+      background-position: 1% 18%;
+    }
+    .msm_categories_value {
+      margin: 8px 0;
+    }
+    .yoy {
+      float: none;
+    }
+  }
+
+  #indexSummaryChart {
+    clear: both;
+    margin-top: -30px;
+    width: 320px;
+  }
+  .chart_sections {
+    .span6 {
+      width: 100%;
+      margin: 0;
+    }
+    #salesMap, #transactionMap, #avgTicketMap {
+      min-height: inherit;
+    }
+    .chart_summary {
+      margin-bottom: 50px;
+    }
+  }
+}

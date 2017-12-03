@@ -1,0 +1,1646 @@
+{
+  "currentMonth": {
+    "month": "Jul",
+    "year": "2017"
+  },
+  "performanceIndex": {
+    "index": 55.8,
+    "indexYoy": -0.7,
+    "sales": 4.4,
+    "transactions": 4.1,
+    "ticketSize": 0.3,
+    "spendPerCard": 0.1
+  },
+  "salesOverall": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Sales": [
+      4.4,
+      3.8,
+      4.9,
+      4.7,
+      4.9,
+      4.9,
+      4.5,
+      3.9,
+      5.3,
+      5.4,
+      4.6,
+      4.9,
+      4.5
+    ]
+  },
+  "transactionsOverall": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Transactions": [
+      4.1,
+      3.4,
+      4.0,
+      3.9,
+      4.7,
+      2.6,
+      2.5,
+      2.3,
+      2.7,
+      2.9,
+      2.5,
+      3.0,
+      3.1
+    ]
+  },
+  "avgTicketOverall": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "AvgTicket": [
+      0.3,
+      0.3,
+      0.8,
+      0.8,
+      0.2,
+      2.2,
+      2.0,
+      1.6,
+      2.5,
+      2.4,
+      2.0,
+      1.8,
+      1.4
+    ]
+  },
+  "spendPerCardOverall": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "SpendPerCard": [
+      0.1,
+      -0.1,
+      0.8,
+      0.7,
+      0.8,
+      2.1,
+      1.4,
+      1.0,
+      2.4,
+      2.0,
+      1.6,
+      1.9,
+      1.4
+    ]
+  },
+  "overallBounds": {
+    "Bounds": {
+      "min": -0.1,
+      "max": 5.4
+    }
+  },
+  "oldSalesByIndustry": {
+    "x": [
+      "Clothing and Accessory",
+      "Food & Drink",
+      "General Merchandise",
+      "Health and Personal Care",
+      "Leisure"
+    ],
+    "Sales": [
+      -0.3,
+      5.4,
+      5.3,
+      5.2,
+      4.8
+    ]
+  },
+  "salesByIndustry": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      -0.3,
+      -0.6,
+      1.6,
+      -1.0,
+      -0.4,
+      1.8,
+      0.8,
+      -2.1,
+      -0.4,
+      2.3,
+      1.5,
+      1.3,
+      0.7
+    ],
+    "Food & Drink": [
+      5.4,
+      4.5,
+      4.8,
+      4.6,
+      4.4,
+      2.0,
+      3.6,
+      2.5,
+      3.1,
+      2.9,
+      3.0,
+      3.5,
+      3.3
+    ],
+    "General Merchandise": [
+      5.3,
+      1.9,
+      2.9,
+      2.7,
+      2.3,
+      2.9,
+      2.4,
+      0.6,
+      3.4,
+      3.9,
+      4.4,
+      3.3,
+      3.9
+    ],
+    "Health and Personal Care": [
+      5.2,
+      3.0,
+      5.0,
+      5.7,
+      2.0,
+      5.3,
+      3.7,
+      5.4,
+      5.7,
+      5.0,
+      5.0,
+      5.9,
+      4.4
+    ],
+    "Leisure": [
+      4.8,
+      4.2,
+      7.0,
+      6.4,
+      7.4,
+      4.2,
+      4.2,
+      3.9,
+      5.3,
+      6.0,
+      2.7,
+      3.3,
+      4.3
+    ]
+  },
+  "salesMap": {
+    "AL": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "AK": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "AZ": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 3.5
+    },
+    "AR": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "CA": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "CO": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "CT": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "DC": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "DE": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "FL": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "GA": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "HI": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "ID": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "IL": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "IN": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "IA": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "KS": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "KY": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "LA": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "ME": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "MD": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "MA": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "MI": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "MN": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "MS": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "MO": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "MT": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "NE": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "NV": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "NH": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "NJ": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "NM": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 3.5
+    },
+    "NY": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "NC": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "ND": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "OH": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "OK": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 3.5
+    },
+    "OR": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "PA": {
+      "fillKey": "6%",
+      "region": "Middle Atlantic Region",
+      "growth": 4.4
+    },
+    "RI": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "SC": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "SD": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "TN": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "TX": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 3.5
+    },
+    "UT": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "VT": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.9
+    },
+    "VA": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "WA": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    },
+    "WV": {
+      "fillKey": "6%",
+      "region": "South Region",
+      "growth": 4.2
+    },
+    "WI": {
+      "fillKey": "6%",
+      "region": "Midwest Region",
+      "growth": 4.6
+    },
+    "WY": {
+      "fillKey": "6%",
+      "region": "West Region",
+      "growth": 5.2
+    }
+  },
+  "oldTransactionsByIndustry": {
+    "x": [
+      "Clothing and Accessory",
+      "Food & Drink",
+      "General Merchandise",
+      "Health and Personal Care",
+      "Leisure"
+    ],
+    "Transactions": [
+      0.4,
+      4.4,
+      4.3,
+      3.3,
+      3.7
+    ]
+  },
+  "transactionsByIndustry": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      0.4,
+      0.2,
+      1.0,
+      -0.2,
+      -1.4,
+      0.6,
+      2.0,
+      -3.9,
+      -2.8,
+      1.8,
+      0.7,
+      -0.6,
+      -0.3
+    ],
+    "Food & Drink": [
+      4.4,
+      3.6,
+      3.6,
+      3.3,
+      3.5,
+      1.3,
+      1.8,
+      1.4,
+      1.8,
+      0.6,
+      1.4,
+      1.9,
+      1.4
+    ],
+    "General Merchandise": [
+      4.3,
+      2.7,
+      2.5,
+      2.3,
+      2.8,
+      2.3,
+      1.5,
+      1.3,
+      0.6,
+      4.1,
+      3.3,
+      4.1,
+      3.4
+    ],
+    "Health and Personal Care": [
+      3.3,
+      2.5,
+      3.5,
+      2.7,
+      3.7,
+      3.5,
+      3.1,
+      2.4,
+      1.9,
+      2.0,
+      2.1,
+      2.6,
+      2.1
+    ],
+    "Leisure": [
+      3.7,
+      2.8,
+      4.9,
+      5.4,
+      7.0,
+      2.6,
+      3.6,
+      2.3,
+      3.2,
+      4.9,
+      0.7,
+      2.5,
+      3.1
+    ]
+  },
+  "transactionsMap": {
+    "AL": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "AK": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "AZ": {
+      "fillKey": "2%",
+      "region": "Southwest Region",
+      "growth": 1.6
+    },
+    "AR": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "CA": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "CO": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "CT": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "DC": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "DE": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "FL": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "GA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "HI": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "ID": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "IL": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "IN": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "IA": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "KS": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "KY": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "LA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "ME": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "MD": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "MA": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "MI": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "MN": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "MS": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "MO": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "MT": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "NE": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "NV": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "NH": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "NJ": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "NM": {
+      "fillKey": "2%",
+      "region": "Southwest Region",
+      "growth": 1.6
+    },
+    "NY": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "NC": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "ND": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "OH": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "OK": {
+      "fillKey": "2%",
+      "region": "Southwest Region",
+      "growth": 1.6
+    },
+    "OR": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "PA": {
+      "fillKey": "4%",
+      "region": "Middle Atlantic Region",
+      "growth": 3.6
+    },
+    "RI": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "SC": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "SD": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "TN": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "TX": {
+      "fillKey": "2%",
+      "region": "Southwest Region",
+      "growth": 1.6
+    },
+    "UT": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "VT": {
+      "fillKey": "6%",
+      "region": "New England Region",
+      "growth": 4.2
+    },
+    "VA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "WA": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    },
+    "WV": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 2.9
+    },
+    "WI": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 3.6
+    },
+    "WY": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 3.1
+    }
+  },
+  "oldAvgTicketByIndustry": {
+    "x": [
+      "Clothing and Accessory",
+      "Food & Drink",
+      "General Merchandise",
+      "Health and Personal Care",
+      "Leisure"
+    ],
+    "AvgTicket": [
+      -0.7,
+      0.9,
+      1.0,
+      1.9,
+      1.1
+    ]
+  },
+  "avgTicketByIndustry": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      -0.7,
+      -0.9,
+      0.5,
+      -0.8,
+      1.0,
+      1.2,
+      -1.2,
+      1.9,
+      2.4,
+      0.5,
+      0.8,
+      1.9,
+      1.0
+    ],
+    "Food & Drink": [
+      0.9,
+      0.9,
+      1.1,
+      1.2,
+      0.8,
+      0.6,
+      1.7,
+      1.1,
+      1.3,
+      2.3,
+      1.6,
+      1.5,
+      1.9
+    ],
+    "General Merchandise": [
+      1.0,
+      -0.7,
+      0.3,
+      0.4,
+      -0.5,
+      0.6,
+      0.9,
+      -0.6,
+      2.8,
+      -0.3,
+      1.1,
+      -0.8,
+      0.6
+    ],
+    "Health and Personal Care": [
+      1.9,
+      0.5,
+      1.5,
+      2.9,
+      -1.6,
+      1.8,
+      0.6,
+      3.0,
+      3.7,
+      2.9,
+      2.9,
+      3.2,
+      2.3
+    ],
+    "Leisure": [
+      1.1,
+      1.4,
+      2.0,
+      1.0,
+      0.3,
+      1.6,
+      0.6,
+      1.6,
+      2.1,
+      1.1,
+      2.0,
+      0.9,
+      1.1
+    ]
+  },
+  "avgTicketMap": {
+    "AL": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "AK": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "AZ": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 1.8
+    },
+    "AR": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "CA": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "CO": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "CT": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "DC": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "DE": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "FL": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "GA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "HI": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "ID": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "IL": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "IN": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "IA": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "KS": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "KY": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "LA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "ME": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "MD": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "MA": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "MI": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "MN": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "MS": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "MO": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "MT": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "NE": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "NV": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "NH": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "NJ": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "NM": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 1.8
+    },
+    "NY": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "NC": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "ND": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "OH": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "OK": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 1.8
+    },
+    "OR": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "PA": {
+      "fillKey": "2%",
+      "region": "Middle Atlantic Region",
+      "growth": 0.7
+    },
+    "RI": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "SC": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "SD": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "TN": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "TX": {
+      "fillKey": "4%",
+      "region": "Southwest Region",
+      "growth": 1.8
+    },
+    "UT": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "VT": {
+      "fillKey": "2%",
+      "region": "New England Region",
+      "growth": 0.7
+    },
+    "VA": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "WA": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    },
+    "WV": {
+      "fillKey": "4%",
+      "region": "South Region",
+      "growth": 1.3
+    },
+    "WI": {
+      "fillKey": "4%",
+      "region": "Midwest Region",
+      "growth": 0.9
+    },
+    "WY": {
+      "fillKey": "4%",
+      "region": "West Region",
+      "growth": 2
+    }
+  },
+  "avgTicketByIndustryPerMonth": {
+    "x": [
+      "Clothing and Accessory",
+      "Food & Drink",
+      "General Merchandise",
+      "Health and Personal Care",
+      "Leisure"
+    ],
+    "AvgTicketSize": [
+      101.69,
+      28.42,
+      46.34,
+      125.66,
+      72.36
+    ]
+  },
+  "avgTicketAmountByIndustry": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      -0.7,
+      -0.9,
+      0.5,
+      -0.8,
+      1.0,
+      1.2,
+      -1.2,
+      1.9,
+      2.4,
+      0.5,
+      0.8,
+      1.9,
+      1.0
+    ],
+    "Food & Drink": [
+      0.9,
+      0.9,
+      1.1,
+      1.2,
+      0.8,
+      0.6,
+      1.7,
+      1.1,
+      1.3,
+      2.3,
+      1.6,
+      1.5,
+      1.9
+    ],
+    "General Merchandise": [
+      1.0,
+      -0.7,
+      0.3,
+      0.4,
+      -0.5,
+      0.6,
+      0.9,
+      -0.6,
+      2.8,
+      -0.3,
+      1.1,
+      -0.8,
+      0.6
+    ],
+    "Health and Personal Care": [
+      1.9,
+      0.5,
+      1.5,
+      2.9,
+      -1.6,
+      1.8,
+      0.6,
+      3.0,
+      3.7,
+      2.9,
+      2.9,
+      3.2,
+      2.3
+    ],
+    "Leisure": [
+      1.1,
+      1.4,
+      2.0,
+      1.0,
+      0.3,
+      1.6,
+      0.6,
+      1.6,
+      2.1,
+      1.1,
+      2.0,
+      0.9,
+      1.1
+    ]
+  },
+  "avgTicketAmountClothing": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      101.7,
+      104.9,
+      116.6,
+      115.4,
+      112.4,
+      103.7,
+      109.4,
+      113.9,
+      114.9,
+      113.3,
+      110.5,
+      105.2,
+      100.7
+    ]
+  },
+  "avgTicketAmountFood": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Food & Drink": [
+      28.4,
+      28.5,
+      27.1,
+      27.6,
+      27.6,
+      30.0,
+      28.6,
+      27.8,
+      27.5,
+      27.8,
+      28.2,
+      28.2,
+      28.6
+    ]
+  },
+  "avgTicketAmountGeneral": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "General Merchandise": [
+      46.3,
+      46.2,
+      46.4,
+      44.9,
+      49.2,
+      45.9,
+      47.7,
+      48.9,
+      48.4,
+      47.8,
+      48.9,
+      46.7,
+      48.1
+    ]
+  },
+  "avgTicketAmountHealth": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Health and Personal Care": [
+      125.7,
+      124.0,
+      133.4,
+      131.4,
+      129.9,
+      125.2,
+      126.1,
+      128.3,
+      133.2,
+      132.0,
+      134.0,
+      137.6,
+      132.7
+    ]
+  },
+  "avgTicketAmountLeisure": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Leisure": [
+      72.4,
+      73.7,
+      81.8,
+      79.2,
+      81.0,
+      80.2,
+      79.5,
+      82.7,
+      80.5,
+      81.2,
+      82.2,
+      78.2,
+      71.6
+    ]
+  },
+  "avgTicketAmountBounds": {
+    "Clothing and Accessory": {
+      "min": 100,
+      "max": 118
+    },
+    "Food & Drink": {
+      "min": 26,
+      "max": 32
+    },
+    "General Merchandise": {
+      "min": 44,
+      "max": 50
+    },
+    "Health and Personal Care": {
+      "min": 122,
+      "max": 138
+    },
+    "Leisure": {
+      "min": 70,
+      "max": 84
+    }
+  },
+  "spendPerCardByIndustry": {
+    "x": [
+      "Jul-16",
+      "Aug-16",
+      "Sep-16",
+      "Oct-16",
+      "Nov-16",
+      "Dec-16",
+      "Jan-17",
+      "Feb-17",
+      "Mar-17",
+      "Apr-17",
+      "May-17",
+      "Jun-17",
+      "Jul-17"
+    ],
+    "Clothing and Accessory": [
+      -0.6,
+      -1.0,
+      0.5,
+      -0.9,
+      0.8,
+      1.4,
+      -1.2,
+      1.7,
+      2.2,
+      0.3,
+      0.8,
+      1.6,
+      0.9
+    ],
+    "Food & Drink": [
+      0.6,
+      0.4,
+      0.8,
+      0.8,
+      0.7,
+      0.5,
+      1.1,
+      0.4,
+      0.9,
+      0.9,
+      0.8,
+      1.2,
+      1.3
+    ],
+    "General Merchandise": [
+      1.3,
+      -0.3,
+      0.8,
+      1.1,
+      0.1,
+      1.1,
+      1.0,
+      -0.2,
+      3.3,
+      -0.1,
+      1.4,
+      -0.3,
+      1.0
+    ],
+    "Health and Personal Care": [
+      1.9,
+      0.4,
+      1.5,
+      2.7,
+      0.0,
+      1.7,
+      0.5,
+      2.9,
+      3.5,
+      2.5,
+      2.7,
+      3.1,
+      2.3
+    ],
+    "Leisure": [
+      1.0,
+      1.2,
+      1.7,
+      0.8,
+      0.3,
+      2.1,
+      -0.8,
+      1.3,
+      2.1,
+      1.7,
+      1.5,
+      0.8,
+      1.0
+    ]
+  },
+  "customerAcquisition": {
+    "x": [
+      "Clothing and Accessory",
+      "Food & Drink",
+      "General Merchandise",
+      "Health and Personal Care",
+      "Leisure"
+    ],
+    "AvgTicket": [
+      -3.1,
+      -5.5,
+      -1.8,
+      -3.8,
+      0.9
+    ]
+  },
+  "pageCopy": {
+    "msmSummary": "The First Data Main Street Monitor is a small business index that reflects the health of the US small business economy.",
+    "introHeading": "",
+    "introCopy": "<p></p>"
+  }
+}

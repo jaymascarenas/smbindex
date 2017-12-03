@@ -1,0 +1,26 @@
+{
+  "customerAcquisition": {
+    "x": ["Clothing and Accessory", "Food & Drink", "General Merchandise", "Health and Personal Care", "Leisure"],
+    "growth": [-4.5, -2.7, -4.2, -6.5, 1.6]
+  },
+  "spendPerCardByIndustry": {
+    "Month": ["15-Nov", "15-Dec", "16-Jan", "16-Feb", "16-Mar", "16-Apr ", "16-May ", "16-Jun ", "16-Jul ", "16-Aug ", "16-Sep ", "16-Oct ", "16-Nov"],
+    "Clothing and Accessory": [-1.0, -0.4, -0.7, -1.1, -1.3, 0.1, -0.5, 0.1, -0.6, -0.9, 0.5, -0.8, 0.8],
+    "Food & Drink": [0.4, -0.1, 0.0, -0.2, -0.0, 0.1, 0.7, -0.0, 0.5, 0.4, 0.8, 0.7, 0.5],
+    "General Merchandise": [0.1, -0.6, -0.4, -1.4, 0.2, 0.7, -0.4, -0.2, 1.3, -0.3, 0.7, 1.0, 0.0],
+    "Health and Personal Care": [2.4, 3.5, 3.4, 2.1, 1.2, 1.9, 0.3, 1.9, 1.9, 0.4, 1.4, 2.6, -0.5],
+    "Leisure": [1.1, 1.7, 0.6, 0.9, -1.0, -0.0, 0.3, 1.8, 0.9, 1.2, 1.7, 0.7, 0.2]
+  },
+  "salesbyIndustry": {
+    "x": ["Clothing and Accessory", "Food & Drink", "General Merchandise", "Health and Personal Care", "Leisure"],
+    "Sales": [-0.3, 4.1, 2.2, 1.4, 7.3]
+  },
+  "transactionsByIndustry": {
+    "x": ["Clothing and Accessory", "Food & Drink", "General Merchandise", "Health and Personal Care", "Leisure"],
+    "Transactions": [-1.3, 3.3, 2.6, 1.7, 7.0]
+  },
+  "avgTicketByIndustry": {
+    "x": ["Clothing and Accessory", "Food & Drink", "General Merchandise", "Health and Personal Care", "Leisure"],
+    "AvgTicket": [1.0, 0.7, -0.4, -0.2, 0.2]
+  }
+}

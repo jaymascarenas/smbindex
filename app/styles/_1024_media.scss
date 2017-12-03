@@ -1,0 +1,25 @@
+@media (max-width: 1024px) {
+  html {
+    font-size: 62.5% * .9;
+  }
+  #indexSummary {
+    padding: 60px 0 28px;
+    .msm_categories {
+      white-space: nowrap;
+    }
+    .yoy_value {
+      margin: 0;
+    }
+    .yoy {
+      margin-bottom: 35px;
+    }
+    .gauge_wrapper {
+      .gauge_container {
+        background-position: 50% 60%;
+        canvas {
+          left: 3%;
+        }
+      }
+    }
+  }
+}

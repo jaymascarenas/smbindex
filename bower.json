@@ -1,0 +1,20 @@
+{
+  "name": "mainstreet-monitor",
+  "private": true,
+  "dependencies": {
+    "sass-bootstrap": "2.3.2",
+    "bootstrap-sass-official": "~3.3.7",
+    "modernizr": "~3.3.1",
+    "jquery-legacy": "jquery#1.12.4",
+    "d3": "~3.5.17",
+    "scrollmagic": "~2.0.5",
+    "gsap": "~1.19.1",
+    "c3": "~0.4.11",
+    "datamaps": "~0.4.5",
+    "topojson": "~1.6.24",
+    "jquery-ui-month-picker": "~3.0.4",
+    "Font-Awesome": "~4.7.0",
+    "clipboard": "^1.6.0",
+    "countUp.js": "countup#^1.9.2"
+  }
+}

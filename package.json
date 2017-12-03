@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "browser-sync": "^2.8.2",
+    "del": "^1.1.1",
+    "gulp": "^3.6.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-connect-php": "0.0.8",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "main-bower-files": "^2.5.0",
+    "opn": "^4.0.2",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "amdefine": ">=0.1.0",
+    "del": "^2.0.2",
+    "indent-string": "^3.0.0",
+    "lodash._getnative": "^3.9.1",
+    "process-nextick-args": "^1.0.2"
+  }
+}
